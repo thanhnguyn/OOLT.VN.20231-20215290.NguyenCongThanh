@@ -6,9 +6,14 @@ public class DigitalVideoDisc {
     private String director;
     private int length;
     private float cost;
+    private static int nbDigitalVideoDiscs = 0;
+
+    private int id;
 
     public DigitalVideoDisc(String title) {
         this.title = title;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     // Constructor 2: Create a DVD object by category, title, and cost
@@ -16,6 +21,8 @@ public class DigitalVideoDisc {
         this.category = category;
         this.title = title;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     // Constructor 3: Create a DVD object by director, category, title, and cost
@@ -24,6 +31,8 @@ public class DigitalVideoDisc {
         this.category = category;
         this.title = title;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     // Constructor 4: Create a DVD object by all attributes: title, category, director, length, and cost
@@ -33,6 +42,8 @@ public class DigitalVideoDisc {
         this.director = director;
         this.length = length;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     public String getDirector() {

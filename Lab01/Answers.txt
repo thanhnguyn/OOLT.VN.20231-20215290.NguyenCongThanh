@@ -1,7 +1,0 @@
- Questions: (Page 21)
-- What happens if users choose “Cancel”?
-	Sau khi nh?n "Cancel", file s? tr? v? tr?ng thái c? (chýa ðý?c lýu) và chýõng tr?nh s? không ðý?c ch?y. 
-- How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do” and “I don’t” (Suggestion: Use Javadocs or using Eclipse/Netbean IDE help).
-	Ð? tùy ch?nh l?a ch?n cho ngý?i dùng, em t?o m?t chýõng tr?nh tùy ch?nh tên test.java ðý?c lýu tr? trong thý m?c Lab01.
-
-

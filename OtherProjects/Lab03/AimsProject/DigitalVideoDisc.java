@@ -1,4 +1,4 @@
-package Lab02.AimsProject;
+package OtherProjects.Lab02.AimsProject;
 
 public class DigitalVideoDisc {
     private String title;

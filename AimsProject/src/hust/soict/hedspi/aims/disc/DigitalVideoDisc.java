@@ -1,4 +1,4 @@
-package Lab02.AimsProject;
+package AimsProject.src.hust.soict.hedspi.aims.disc;
 
 public class DigitalVideoDisc {
     private String title;

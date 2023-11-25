@@ -1,4 +1,4 @@
-package Lab01;
+package OtherProjects.Lab01;
 
 public class HelloWorld {
     public static void main(String[] args) {

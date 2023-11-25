@@ -1,11 +1,13 @@
-package Lab02.AimsProject;
+package OtherProjects.Lab02.AimsProject;
+
+import AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
     private int qtyOrdered;
-    private DigitalVideoDisc itemOrdered[] =
-            new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
-    public void addDigitalVideoDisc(DigitalVideoDisc disc) {
+    private AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc itemOrdered[] =
+            new AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc[MAX_NUMBERS_ORDERED];
+    public void addDigitalVideoDisc(AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc disc) {
         if (qtyOrdered < MAX_NUMBERS_ORDERED) {
             itemOrdered[qtyOrdered] = disc;
             qtyOrdered++;
@@ -15,7 +17,7 @@ public class Cart {
         }
     }
 
-    public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
+    public void removeDigitalVideoDisc(AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc disc) {
         for (int i = 0; i < qtyOrdered; i++) {
             if (itemOrdered[i] == disc) {
                 for (int j = i; j < qtyOrdered - 1; j++) {
@@ -50,13 +52,13 @@ public class Cart {
         }
     }
 
-    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
-        for (DigitalVideoDisc dvd : dvdList) {
+    public void addDigitalVideoDisc(AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc[] dvdList) {
+        for (AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc dvd : dvdList) {
             addDigitalVideoDisc(dvd);
         }
     }
 
-    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+    public void addDigitalVideoDisc(AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
         addDigitalVideoDisc(dvd1); // Utilizing the existing method to add the first DVD
         addDigitalVideoDisc(dvd2);
     }

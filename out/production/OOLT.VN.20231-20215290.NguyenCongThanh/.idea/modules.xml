@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/OOLT.VN.20231-20215290.NguyenCongThanh.iml" filepath="$PROJECT_DIR$/.idea/OOLT.VN.20231-20215290.NguyenCongThanh.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AimsProject/hust.soict.hedspi.aims/hust.soict.hedspi.aims.iml" filepath="$PROJECT_DIR$/AimsProject/hust.soict.hedspi.aims/hust.soict.hedspi.aims.iml" />
     </modules>
   </component>
 </project>

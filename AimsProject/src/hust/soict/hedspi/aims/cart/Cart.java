@@ -1,7 +1,6 @@
 package AimsProject.src.hust.soict.hedspi.aims.cart;
 
-import AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc;
-import java.util.ArrayList;
+import AimsProject.src.hust.soict.hedspi.aims.media.DigitalVideoDisc;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;

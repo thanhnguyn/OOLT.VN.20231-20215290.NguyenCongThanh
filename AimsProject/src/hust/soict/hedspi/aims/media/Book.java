@@ -3,31 +3,11 @@ package AimsProject.src.hust.soict.hedspi.aims.media;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book {
-    private int id;
-    private String title;
-    private String category;
-    private float cost;
+public class Book extends Media {
+
     private List<String> authors = new ArrayList<String>();
 
     public Book(){
-    }
-
-    public Book(String title) {
-        this.title = title;
-    }
-
-    public Book(String title, String category, float cost)  {
-        this.title = title;
-        this.category = category;
-        this.cost = cost;
-    }
-
-    public Book(int id,String title, String category, float cost) {
-        this.id = id;
-        this.title = title;
-        this.category = category;
-        this.cost = cost;
     }
 
     public void addAuthor(String authorName) {
@@ -53,18 +33,6 @@ public class Book {
 
     public List<String> getAuthors() {
         return authors;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public float getCost() {
-        return cost;
     }
 
 

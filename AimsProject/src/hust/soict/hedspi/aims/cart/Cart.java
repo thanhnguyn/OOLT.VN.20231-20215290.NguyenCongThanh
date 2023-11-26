@@ -1,11 +1,12 @@
 package AimsProject.src.hust.soict.hedspi.aims.cart;
 
 import AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+import java.util.ArrayList;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
-    private int qtyOrdered;
-    private DigitalVideoDisc itemOrdered[] =
+    private static int qtyOrdered;
+    private static DigitalVideoDisc[] itemOrdered =
             new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
     public void addDigitalVideoDisc(DigitalVideoDisc disc) {
         if (qtyOrdered < MAX_NUMBERS_ORDERED) {
@@ -44,7 +45,8 @@ public class Cart {
         if (qtyOrdered == 0) {
             System.out.println("The cart is empty.");
         } else {
-            System.out.println("Cart items:");
+            System.out.println("***********************CART***********************");
+            System.out.println("Ordered Items:");
             for (int i = 0; i < qtyOrdered; i++) {
                 System.out.println(String.format("%-10s %-30s $%.2f", (i + 1), itemOrdered[i].getTitle(), itemOrdered[i].getCost()));
             }
@@ -63,4 +65,30 @@ public class Cart {
         addDigitalVideoDisc(dvd2);
     }
 
+    public void print() {
+        System.out.println("***********************CART***********************");
+        for (int i = 0; i < qtyOrdered; i++ ) {
+            System.out.println(i+1 + ". " + itemOrdered[i]);
+        }
+        System.out.println("Total cost: " + totalCost() + "$");
+        System.out.println("**************************************************");
+    }
+
+    public static void searchById(int id) {
+        System.out.println("Search results by ID '" + id + "':");
+
+        boolean matchFound = false;
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (i+1 == id) {
+                System.out.println("Match found by ID:");
+                System.out.printf("DVD - %s", itemOrdered[i]);
+                matchFound = true;
+                break;  // Break the loop if a match is found
+            }
+        }
+
+        if (!matchFound) {
+            System.out.println("No match found by ID.");
+        }
+    }
 }

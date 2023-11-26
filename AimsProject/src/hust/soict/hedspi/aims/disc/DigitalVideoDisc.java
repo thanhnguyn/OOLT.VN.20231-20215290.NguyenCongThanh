@@ -1,5 +1,6 @@
 package AimsProject.src.hust.soict.hedspi.aims.disc;
 
+
 public class DigitalVideoDisc {
     private String title;
     private String category;
@@ -68,6 +69,22 @@ public class DigitalVideoDisc {
 
     public float getCost() {
         return cost;
+    }
+
+    public String toString() {
+        return ("DVD - " + this.getTitle()
+                + " - " + this.getCategory()
+                + " - " + this.getDirector()
+                + " - " + this.getLength()
+                + ": " + this.getCost() + "$");
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
 }

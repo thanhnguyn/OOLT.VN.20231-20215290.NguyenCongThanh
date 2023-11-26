@@ -18,7 +18,7 @@ public class DigitalVideoDisc {
     }
 
     // Constructor 2: Create a DVD object by category, title, and cost
-    public DigitalVideoDisc(String category, String title, float cost) {
+    public DigitalVideoDisc(String title, String category, float cost) {
         this.category = category;
         this.title = title;
         this.cost = cost;

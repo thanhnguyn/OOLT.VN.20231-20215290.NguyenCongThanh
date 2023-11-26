@@ -2,8 +2,9 @@ package AimsProject.src.hust.soict.hedspi.aims.cart;
 
 import java.util.ArrayList;
 
-import AimsProject.src.hust.soict.hedspi.aims.media.DigitalVideoDisc;
 import AimsProject.src.hust.soict.hedspi.aims.media.Media;
+
+
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
@@ -80,5 +81,9 @@ public class Cart {
             }
             System.out.println("No DVD is matched!");
         }
+    }
+
+    public ArrayList<Media> getItemsOrdered() {
+        return itemsOrdered;
     }
 }

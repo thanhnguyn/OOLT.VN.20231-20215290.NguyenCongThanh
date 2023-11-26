@@ -32,9 +32,9 @@ public class DigitalVideoDisc extends Disc {
         System.out.println("DVD length: " + this.getLength());
     }
 
-//	public boolean isMatch(String title) {
-//		return this.getTitle().equals(title);
-//	}
+	public boolean isMatch(String title) {
+		return this.getTitle().equals(title);
+	}
 
     public int getNbDigitalVideoDiscs(){
         return nbDigitalVideoDiscs;

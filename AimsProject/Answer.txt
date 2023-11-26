@@ -1,7 +1,7 @@
 1. Which classes are aggregates of other classes?  Checking all constructors of whole classes if they initialize for their parts?
 - L?p con s? ch?a l?p cha, các phýõng th?c và thu?c tính trong l?p cha s? ðý?c kh?i t?o trong l?p con.
 
-2.  Write a toString() method for the DigitalVideoDisc class. What should be the return type of this method?
+2.  Write a toString() method for the DigitalVideoDisc class. What should be the return type of this method? 
 - String
  
 3. Suppose we are taking this Comparable interface approach.

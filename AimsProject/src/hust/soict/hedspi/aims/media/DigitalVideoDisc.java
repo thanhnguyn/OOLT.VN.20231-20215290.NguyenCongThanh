@@ -27,9 +27,14 @@ public class DigitalVideoDisc extends Disc {
         this.setId(nbDigitalVideoDiscs);
     }
 
-    public boolean isMatch(String title) {
-        return this.getTitle().equals(title);
+    public void play() {
+        System.out.println("Playing DVD: " + this.getTitle());
+        System.out.println("DVD length: " + this.getLength());
     }
+
+//	public boolean isMatch(String title) {
+//		return this.getTitle().equals(title);
+//	}
 
     public int getNbDigitalVideoDiscs(){
         return nbDigitalVideoDiscs;

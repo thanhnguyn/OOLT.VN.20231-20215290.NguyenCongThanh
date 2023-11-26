@@ -64,4 +64,8 @@ public class Media {
         this.cost = cost;
     }
 
+    public boolean isMatch(String title) {
+        return this.getTitle().equals(title);
+    }
+
 }

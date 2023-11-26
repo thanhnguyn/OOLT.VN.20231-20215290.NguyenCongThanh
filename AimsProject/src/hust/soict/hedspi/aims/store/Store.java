@@ -1,5 +1,5 @@
 package AimsProject.src.hust.soict.hedspi.aims.store;
-import AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+import AimsProject.src.hust.soict.hedspi.aims.media.DigitalVideoDisc;
 
 import java.util.ArrayList;
 

@@ -1,11 +1,11 @@
 package AimsProject.src.hust.soict.hedspi.test.disc;
 
-import AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+import AimsProject.src.hust.soict.hedspi.aims.media.DigitalVideoDisc;
 
 public class TestPassingParameter {
     public static void main(String[] args) {
-        AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc jungleDVD = new AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc("JungLe");
-        AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc cinderellaDVD = new AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc("Cinderella");
+        DigitalVideoDisc jungleDVD = new DigitalVideoDisc("JungLe");
+        DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
 
         swap(jungleDVD,cinderellaDVD);
         System.out.println("jungle dvd title: " + jungleDVD.getTitle());
@@ -21,7 +21,7 @@ public class TestPassingParameter {
         o2 = tmp;
     }
 
-    public static void changeTitle(AimsProject.src.hust.soict.hedspi.aims.disc.DigitalVideoDisc dvd, String title){
+    public static void changeTitle(DigitalVideoDisc dvd, String title){
         String oldTitle = dvd.getTitle();
         dvd.setTitle(title);
         dvd = new DigitalVideoDisc(oldTitle);

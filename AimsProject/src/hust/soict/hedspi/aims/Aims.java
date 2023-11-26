@@ -14,12 +14,10 @@ public class Aims {
 
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin","Animation",18.99f);
 
-        anOrder.addDigitalVideoDisc(dvd1,dvd2);
+        anOrder.addMedia(dvd1,dvd2);
 
-        anOrder.displayCart();
 
-        anOrder.removeDigitalVideoDisc(dvd2);
+        anOrder.removeMedia(dvd2);
 
-        anOrder.displayCart();
     }
 }

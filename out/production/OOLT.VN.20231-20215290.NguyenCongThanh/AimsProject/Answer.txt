@@ -1,0 +1,34 @@
+1. Which classes are aggregates of other classes?  Checking all constructors of whole classes if they initialize for their parts?
+- L?p con s? ch?a l?p cha, các phýõng th?c và thu?c tính trong l?p cha s? ðý?c kh?i t?o trong l?p con.
+
+2.  Write a toString() method for the DigitalVideoDisc class. What should be the return type of this method? 
+- String
+ 
+3. Suppose we are taking this Comparable interface approach.
+- What class should implement the Comparable interface?
+   + Các l?p MediaComparatorByCostTitle và MediaComparatorByTitleCost nên tri?n khai giao di?n Comparable.
+- In those classes, how should you implement the compareTo()method to reflect the ordering that we want?
+   + Chúng ta nên so sánh theo th? t? t? tiêu ð? ð?n giá ho?c ngý?c l?i.
+- Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+   + Có
+- Suppose the DVDs have a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+   + Thêm m?t l?p m?i trong gói: AimsProject.src.hust.soict.hedspi.aims.media.
+
+import java.util.Comparator;
+
+public class MediaComparator3 implements Comparator<Media> {
+    public MediaComparatorByTitleCost() {
+        // TODO Auto-generated constructor stub
+    }
+
+    @Override
+    public int compare(Media md1, Media md2) {
+        if((md1.getTitle().equals(md2.getTitle())) && (md1.getLength() != md2.getLength())) {
+            return int.compare(md1.getLength(),md2.getLength());
+        }
+	else if ((md1.getTitle().equals(md2.getTitle())) && (md1.getLength() == md2.getLength())){
+	    return float.compare(md1.getCost(),md2.getCost());	
+	}
+	else return md1.getTitle().compareTo(md2.getTitle());
+    }
+}

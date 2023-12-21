@@ -39,8 +39,23 @@ public class Store {
             return ;
         }
     }
+
+    public Media searchMedia(String title) {
+        for (Media medium: this.itemsInStore) {
+            if (medium.getTitle().toLowerCase().equals(title.toLowerCase())) {
+                return medium;
+            }
+        }
+        return null;
+    }
+
     public ArrayList<Media> getItemsInStore() {
         return itemsInStore;
     }
 
+    public void print() {
+        for (Media e : itemsInStore) {
+            System.out.println(e.toString());
+        }
+    }
 }

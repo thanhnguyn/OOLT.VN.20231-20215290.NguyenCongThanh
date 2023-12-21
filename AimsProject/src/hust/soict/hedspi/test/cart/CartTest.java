@@ -3,8 +3,10 @@ package AimsProject.src.hust.soict.hedspi.test.cart;
 import AimsProject.src.hust.soict.hedspi.aims.cart.Cart;
 import AimsProject.src.hust.soict.hedspi.aims.media.DigitalVideoDisc;
 
+import javax.naming.LimitExceededException;
+
 public class CartTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws LimitExceededException {
         Cart cart = new Cart();
 
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King","Animation","Roger Allers",87,19.95f);
@@ -16,7 +18,7 @@ public class CartTest {
 
         cart.print();
 
-        cart.searchId(3);
+//        cart.searchId(3);
 
 
     }

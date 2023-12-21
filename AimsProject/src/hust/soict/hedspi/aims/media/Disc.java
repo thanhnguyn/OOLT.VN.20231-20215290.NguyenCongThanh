@@ -1,10 +1,10 @@
 package AimsProject.src.hust.soict.hedspi.aims.media;
 
-public class Disc extends Media {
+public abstract class Disc extends Media {
     private String director;
     private int length;
 
-    public Disc() {
+    public Disc(String title) {
         // TODO Auto-generated constructor stub
     }
     public Disc(String director, String category, String title, float cost){
@@ -20,7 +20,7 @@ public class Disc extends Media {
         this.setDirector(director);
         this.setLength(length);
     }
-    public Disc(String title) {
+    public Disc(String s, String title, float cost) {
         super(title);
     }
 

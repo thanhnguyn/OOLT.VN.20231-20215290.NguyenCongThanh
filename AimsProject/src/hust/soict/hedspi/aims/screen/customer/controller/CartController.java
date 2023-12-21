@@ -1,40 +1,30 @@
 package AimsProject.src.hust.soict.hedspi.aims.screen.customer.controller;
 
-import java.io.IOException;
-
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
+import AimsProject.src.hust.soict.hedspi.aims.cart.Cart;
 import AimsProject.src.hust.soict.hedspi.aims.exception.NonExistingItemException;
 import AimsProject.src.hust.soict.hedspi.aims.exception.PlayerException;
-import AimsProject.src.hust.soict.hedspi.aims.cart.Cart;
 import AimsProject.src.hust.soict.hedspi.aims.media.Media;
-import AimsProject.src.hust.soict.hedspi.aims.store.Store;
 import AimsProject.src.hust.soict.hedspi.aims.media.Playable;
-
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.FlowLayout;
-
+import AimsProject.src.hust.soict.hedspi.aims.store.Store;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import javafx.scene.Node;
+
+import javax.swing.*;
+import java.awt.*;
+import java.io.IOException;
 
 public class CartController {
     private Cart cart;
@@ -83,7 +73,7 @@ public class CartController {
     private Label costLabel;
 
     @FXML
-    void btnRemovePressed(ActionEvent event) {
+    void btnRemovePressed(ActionEvent event) throws NonExistingItemException {
         Media media = tblMedia.getSelectionModel().getSelectedItem();
         cart.removeMedia(media);
 

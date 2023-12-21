@@ -1,9 +1,9 @@
-package hust.soict.dsai.test.screen.customer.store;
+package AimsProject.src.hust.soict.hedspi.test.screen.customer.store;
 
-import hust.soict.dsai.aims.cart.Cart;
-import hust.soict.dsai.aims.media.*;
-import hust.soict.dsai.aims.screen.customer.controller.ViewStoreController;
-import hust.soict.dsai.aims.store.Store;
+import AimsProject.src.hust.soict.hedspi.aims.cart.Cart;
+import AimsProject.src.hust.soict.hedspi.aims.media.*;
+import AimsProject.src.hust.soict.hedspi.aims.screen.customer.controller.ViewStoreController;
+import AimsProject.src.hust.soict.hedspi.aims.store.Store;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

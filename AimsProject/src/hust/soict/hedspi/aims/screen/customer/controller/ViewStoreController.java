@@ -1,18 +1,19 @@
-package hust.soict.dsai.aims.screen.customer.controller;
+package AimsProject.src.hust.soict.hedspi.aims.screen.customer.controller;
 
-import java.io.IOException;
-import hust.soict.dsai.aims.cart.Cart;
-import hust.soict.dsai.aims.store.Store;
+import AimsProject.src.hust.soict.hedspi.aims.cart.Cart;
+import AimsProject.src.hust.soict.hedspi.aims.store.Store;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.Node;
-import javafx.stage.Stage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class ViewStoreController {
 
@@ -46,7 +47,7 @@ public class ViewStoreController {
 
     @FXML
     public void initialize() {
-        final String ITEM_FXML_FILE_PATH = "/hust/soict/dsai/aims/screen/customer/view/Item.fxml";
+        final String ITEM_FXML_FILE_PATH = "AimsProject/src/hust/soict/hedspi/aims/screen/customer/view/Item.fxml";
         int column = 0;
         int row = 1;
         for (int i = 0; i < store.getItemsInStore().size(); i++) {

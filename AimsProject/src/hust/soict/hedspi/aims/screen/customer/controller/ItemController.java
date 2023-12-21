@@ -1,4 +1,4 @@
-package hust.soict.dsai.aims.screen.customer.controller;
+package AimsProject.src.hust.soict.hedspi.aims.screen.customer.controller;
 
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
@@ -9,9 +9,9 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import hust.soict.dsai.aims.cart.Cart;
-import hust.soict.dsai.aims.exception.*;
-import hust.soict.dsai.aims.media.*;
+import AimsProject.src.hust.soict.hedspi.aims.cart.Cart;
+import AimsProject.src.hust.soict.hedspi.aims.exception.*;
+import AimsProject.src.hust.soict.hedspi.aims.media.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;

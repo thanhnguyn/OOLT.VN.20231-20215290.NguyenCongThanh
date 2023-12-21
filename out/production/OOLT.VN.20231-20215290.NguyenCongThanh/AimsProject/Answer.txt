@@ -1,3 +1,4 @@
+LAB03
 1. Which classes are aggregates of other classes?  Checking all constructors of whole classes if they initialize for their parts?
 - L?p con s? ch?a l?p cha, các phýõng th?c và thu?c tính trong l?p cha s? ðý?c kh?i t?o trong l?p con.
 
@@ -32,3 +33,14 @@ public class MediaComparator3 implements Comparator<Media> {
 	else return md1.getTitle().compareTo(md2.getTitle());
     }
 }
+
+
+
+
+
+
+
+
+
+
+LAB04

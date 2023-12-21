@@ -1,6 +1,5 @@
 package AimsProject.src.hust.soict.hedspi.aims.media;
 
-import AimsProject.src.hust.soict.hedspi.aims.media.Playable;
 public class Track implements Playable{
 
     private String title;
@@ -13,9 +12,10 @@ public class Track implements Playable{
         this.setTitle(title);
     }
 
-    public void play() {
+    public String[] play() {
         System.out.println("Playing track: " + this.getTitle());
         System.out.println("Track length: " + this.getLength());
+        return new String[0];
     }
 
     public String getTitle() {

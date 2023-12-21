@@ -5,6 +5,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="javafx.fxml (3)" level="application" />
     <orderEntry type="library" name="javafx" level="project" />
-    <orderEntry type="library" name="javafx-sdk-17.0" level="project" />
+    <orderEntry type="library" name="javafx-sdk-17.01" level="project" />
+    <orderEntry type="library" name="javafx-sdk-17.02" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

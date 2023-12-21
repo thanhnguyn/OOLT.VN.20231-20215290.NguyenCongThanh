@@ -1,81 +1,16 @@
 package AimsProject.src.hust.soict.hedspi.aims.media;
 
-import java.util.ArrayList;
-//import hust.soict.dsai.aims.media.Track;
+import AimsProject.src.hust.soict.hedspi.aims.exception.PlayerException;
 
-public class CompactDisc extends Disc implements Playable {
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class CompactDisc extends Disc implements Playable{
 
     private String artist;
-    private ArrayList<Track> tracks = new ArrayList<Track>();
-
-    public CompactDisc(String title, String category, String director, int length, float cost) {
-//    	super(title, category, director, length, cost);
-        this.setTitle(title);
-        this.setCategory(category);
-        this.setDirector(director);
-        this.setCost(cost);
-        this.setLength(length);
-    }
-
-    public CompactDisc(String title, String category, float cost) {
-        this.setTitle(title);
-        this.setCategory(category);
-        this.setCost(cost);
-//		this.id = nbDigitalVideoDiscs;
-    }
-
-    public CompactDisc(String title, String category, String director, float cost) {
-        this.setTitle(title);
-        this.setCategory(category);
-        this.setDirector(director);
-        this.setCost(cost);
-//        this.setId(nbDigitalVideoDiscs);
-    }
-
-    public CompactDisc(String artist) {
-        super();
-        this.setArtist(artist);
-    }
-
-    public void addTrack(Track newTrack) {
-        if (this.tracks.contains(newTrack)) {
-            System.out.println("Track already exists!");
-            return;
-        }
-        this.tracks.add(newTrack);
-        System.out.println("Track is added!");
-    }
-
-    public void removeTrack(Track track) {
-        if (this.tracks.contains(track)) {
-            this.tracks.remove(track);
-            System.out.println("Track is removed!");
-            return;
-        }
-        System.out.println("Track does not exist!");
-    }
-
-    public void play() {
-        System.out.println("CD contains " + this.tracks.size() + " tracks!");
-        System.out.println("Tracks:");
-        int i = 0;
-        for (Track track : tracks) {
-            System.out.println(i++ + ". " + track.getTitle());
-        }
-        for (Track track : tracks) {
-            track.play();
-        }
-    }
-
-    @Override
-    public int getLength() {
-        int sum = 0;
-        for (Track track : tracks) {
-            sum += track.getLength();
-        }
-        return sum;
-    }
-
+    private int length;
+    private List<Track> tracks = new ArrayList<Track>();
     public String getArtist() {
         return artist;
     }
@@ -84,17 +19,109 @@ public class CompactDisc extends Disc implements Playable {
         this.artist = artist;
     }
 
-    //	public ArrayList<Track> getTrack() {
-//		return track;
-//	}
-//	public void setTrack(ArrayList<Track> track) {
-//		this.track = track;
-//	}
+    public List<Track> getTracks() {
+        return this.tracks;
+    }
+
+    public void setTracks(List<Track> tracks) {
+        this.tracks = tracks;
+    }
+
+    public void addTrack(Track track) {
+        if (tracks.contains(track)) {
+            System.out.println("This track already exsists!");
+            return;
+        }
+        tracks.add(track);
+        System.out.println("The track: " + track.getTitle() + " added to list!");
+        return;
+    }
+
+    public void removeTrack(Track track) {
+        if (tracks.contains(track)) {
+            tracks.remove(track);
+            return;
+        }
+        System.out.println("The track: " + track + " remove from list");
+        return;
+    }
+
+    public int getLength() {
+        return this.length;
+    }
+
+    public CompactDisc(int id, String title, String category, float cost, int length, String director,
+                       String artist, List<Track> track) {
+        super(title);
+        this.artist = artist;
+        this.tracks = track;
+    }
+
+    public CompactDisc(int id, String title, String category, float cost) {
+        super(String.valueOf(id),title, category, cost);
+    }
+
+    public CompactDisc(String title) {
+        super(title);
+    }
+
+    public CompactDisc(String title, String category, String artist, String director, int length, float cost) {
+        // TODO Auto-generated constructor stub
+        super(title, category, director, cost);
+        this.artist = artist;
+        this.length = length;
+    }
+
+    public CompactDisc(String title, String author, String director, float cost){
+        super(title,author,director,cost);
+    }
+
+    public String[] play() throws PlayerException {
+        if (this.getLength() < 0) {
+            throw new PlayerException("ERROR: CD length is non-positive!");
+        } else {
+            String str = "";
+            str+="The total length of the CD to add is: " + getLength();
+            str+="/n";
+            str+="Playing CD: " + this.getTitle();
+            str+="/n";
+            str+="CD length: " + getLength();
+            Iterator<Track> iter = tracks.iterator();
+            Track nextTrack;
+            while (iter.hasNext()) {
+                nextTrack = (Track) iter.next();
+                str+="/n";
+                for (String string : nextTrack.play()) {
+                    str+=string;
+                    str+="/n";
+                }
+            }
+            return str.split("/n");
+        }
+    }
+
+    @Override
     public String toString() {
-        return ("CD - " + this.getTitle()
-                + " - " + this.getCategory()
-                + " - " + this.getDirector()
-                + " - " + this.getLength()
-                + ": " + this.getCost() + "$");
+        StringBuilder sb = new StringBuilder();
+        sb.append("Compact Disc Information:\n");
+        sb.append("Title: ").append(getTitle()).append("\n");
+        sb.append("Category: ").append(getCategory()).append("\n");
+        sb.append("Cost: ").append(getCost()).append("\n");
+        sb.append("Artist: ").append(artist).append("\n");
+        sb.append("Number of Tracks: ").append(tracks.size()).append("\n");
+        sb.append("Total Length: ").append(getLength()).append(" minutes").append("\n");
+        return sb.toString();
+    }
+
+    @Override
+    public String getType() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public String getDetails() {
+        // TODO Auto-generated method stub
+        return null;
     }
 }

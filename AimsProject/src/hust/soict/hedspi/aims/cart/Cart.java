@@ -8,6 +8,8 @@ import javafx.collections.ObservableList;
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
     private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
+    private ObservableList<Media> viewFilter;
+
     private int qtyOrdered = 0;
     public void addMedia(Media disc) {
         if(qtyOrdered == 20) {
@@ -80,8 +82,55 @@ public class Cart {
             System.out.println("No DVD is matched!");
         }
     }
+    public Media searchMedia(String title) {
+        for (Media medium : this.itemsOrdered) {
+            if (medium.getTitle().toLowerCase().equals(title.toLowerCase())) {
+                return medium;
+            }
+        }
+        return null;
+    }
 
+    public void sortByTitle() {
+        FXCollections.sort(this.itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+    }
+
+    public void sortByCost() {
+        FXCollections.sort(this.itemsOrdered, Media.COMPARE_BY_COST_TITLE);
+    }
+
+    public int getSize() {
+        return this.itemsOrdered.size();
+    }
     public ObservableList<Media> getItemsOrdered() {
         return itemsOrdered;
+    }
+
+    public ObservableList<Media> filterId(String str) {
+        viewFilter = FXCollections.observableArrayList();
+        for (int i = 0; i < this.itemsOrdered.size(); i++) {
+            if (str.length() > String.valueOf(this.itemsOrdered.get(i).getId()).length()) {
+                continue;
+            } else if (String.valueOf(this.itemsOrdered.get(i).getId()).substring(0, str.length()).equals(str)) {
+                viewFilter.add(this.itemsOrdered.get(i));
+            }
+        }
+        return viewFilter;
+    }
+    public ObservableList<Media> filterTitle(String str) {
+        viewFilter = FXCollections.observableArrayList();
+        for (int i = 0; i < this.itemsOrdered.size(); i++) {
+            if (str.length() > String.valueOf(this.itemsOrdered.get(i).getTitle()).length()) {
+                continue;
+            } else if (this.itemsOrdered.get(i).getTitle().substring(0, str.length()).equals(str)) {
+                viewFilter.add(this.itemsOrdered.get(i));
+            }
+        }
+        return viewFilter;
+    }
+
+
+    public void empty() {
+        this.itemsOrdered.clear();
     }
 }

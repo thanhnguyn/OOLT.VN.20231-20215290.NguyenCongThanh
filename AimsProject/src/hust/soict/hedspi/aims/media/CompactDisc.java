@@ -8,8 +8,8 @@ public class CompactDisc extends Disc implements Playable {
     private String artist;
     private ArrayList<Track> tracks = new ArrayList<Track>();
 
-    public CompactDisc(String title, String category, String director, int length, float cost) {
-//    	super(title, category, director, length, cost);
+    public CompactDisc(String title, String category, String director, String dunno, int length, float cost) {
+    	super(title, category, director, length, cost);
         this.setTitle(title);
         this.setCategory(category);
         this.setDirector(director);
@@ -55,7 +55,7 @@ public class CompactDisc extends Disc implements Playable {
         System.out.println("Track does not exist!");
     }
 
-    public void play() {
+    public String[] play() {
         System.out.println("CD contains " + this.tracks.size() + " tracks!");
         System.out.println("Tracks:");
         int i = 0;
@@ -65,6 +65,7 @@ public class CompactDisc extends Disc implements Playable {
         for (Track track : tracks) {
             track.play();
         }
+        return new String[0];
     }
 
     @Override

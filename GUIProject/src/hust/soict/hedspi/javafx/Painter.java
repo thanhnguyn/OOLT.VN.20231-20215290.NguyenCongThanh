@@ -11,7 +11,7 @@ public class Painter extends Application {
     @Override
     public void start(Stage stage) throws Exception{
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/hust/soict/dsai/javafx/Painter.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("GUIProject/hust/soict/hedspi/javafx/Painter.fxml"));
 
             stage.setTitle("Painter");
             stage.setScene(new Scene(root));

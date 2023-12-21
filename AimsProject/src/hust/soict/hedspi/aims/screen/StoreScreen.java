@@ -1,6 +1,6 @@
 package AimsProject.src.hust.soict.hedspi.aims.screen;
 
-import AimsProject.src.hust.soict.hedspi.aims.media.DigitalVideoDisc;
+import AimsProject.src.hust.soict.hedspi.aims.media.Media;
 import AimsProject.src.hust.soict.hedspi.aims.store.Store;
 
 import javax.swing.*;
@@ -60,7 +60,7 @@ public class StoreScreen extends JFrame {
         JPanel center = new JPanel();
         center.setLayout(new GridLayout(3,3,2,2));
 
-        ArrayList<DigitalVideoDisc> mediaInStore = store.getItemsInStore();
+        ArrayList<Media> mediaInStore = store.getItemsInStore();
         for (int i=0; i<9;i++) {
             MediaStore cell = new MediaStore(mediaInStore.get(i));
             center.add(cell);

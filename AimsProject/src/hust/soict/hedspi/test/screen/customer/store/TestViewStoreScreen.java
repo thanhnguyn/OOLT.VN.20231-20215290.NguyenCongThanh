@@ -1,7 +1,10 @@
 package AimsProject.src.hust.soict.hedspi.test.screen.customer.store;
 
 import AimsProject.src.hust.soict.hedspi.aims.cart.Cart;
-import AimsProject.src.hust.soict.hedspi.aims.media.*;
+import AimsProject.src.hust.soict.hedspi.aims.media.Book;
+import AimsProject.src.hust.soict.hedspi.aims.media.CompactDisc;
+import AimsProject.src.hust.soict.hedspi.aims.media.DigitalVideoDisc;
+import AimsProject.src.hust.soict.hedspi.aims.media.Track;
 import AimsProject.src.hust.soict.hedspi.aims.screen.customer.controller.ViewStoreController;
 import AimsProject.src.hust.soict.hedspi.aims.store.Store;
 import javafx.application.Application;
@@ -46,7 +49,7 @@ public class TestViewStoreScreen extends Application {
 		CompactDisc cd2 = new CompactDisc("Allstars 2", "Yes", "Smash Mouth", "Dunno", 23, 69.420f);
         Track track1 = new Track("Allstars", 4);
         Track track2 = new Track("Allstars 2", 5);
-        Book book = new Book("Harry Potter", "Fantasy", 64, 30.00f);
+        Book book = new Book("Harry Potter", "Fantasy", 30.00f);
 
         // Try adding Media
 		store.addMedia(dvd1);

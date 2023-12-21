@@ -1,7 +1,8 @@
 package AimsProject.src.hust.soict.hedspi.aims.store;
-import java.util.ArrayList;
 
 import AimsProject.src.hust.soict.hedspi.aims.media.DigitalVideoDisc;
+
+import java.util.ArrayList;
 
 public class Store {
     private ArrayList<DigitalVideoDisc> itemsInStore = new ArrayList<DigitalVideoDisc>();
@@ -25,4 +26,5 @@ public class Store {
     public ArrayList<DigitalVideoDisc> getItemsInStore() {
         return itemsInStore;
     }
+
 }

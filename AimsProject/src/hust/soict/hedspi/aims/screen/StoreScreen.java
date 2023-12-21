@@ -1,7 +1,6 @@
 package AimsProject.src.hust.soict.hedspi.aims.screen;
 
 import AimsProject.src.hust.soict.hedspi.aims.media.DigitalVideoDisc;
-import AimsProject.src.hust.soict.hedspi.aims.media.Media;
 import AimsProject.src.hust.soict.hedspi.aims.store.Store;
 
 import javax.swing.*;
@@ -81,6 +80,9 @@ public class StoreScreen extends JFrame {
         setTitle("Store");
         setSize(1024,768);
     }
+    public static void main(String[] args) {
 
+    }
 }
+
 
